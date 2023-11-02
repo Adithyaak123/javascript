@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num=parseInt(prompt("enter a number"))
+        var sum=0;
+        var temp=num;
+        while(temp>0)
+        {
+            var digit=temp%10;
+            sum+=digit**3;
+            temp=parseInt(temp/10);
+        }
+        if(num==sum)
+        {
+            document.write(num,"it is amstrong number")
+        }
+        else{
+            document.write(num,"it is not amstrong number")
+        }
+    </script>
+</body>
+</html>

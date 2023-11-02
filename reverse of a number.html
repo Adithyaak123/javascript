@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num=parseInt(prompt("enter a number"));
+        var rev=0;
+        var temp=num;
+        while(temp>0)
+        {
+            var rem=temp%10;
+            rev=rev*10+rem;
+            temp=parseInt(temp/10);
+        }
+        // document.write(rev);
+        alert(rev);
+    </script>
+</body>
+</html>
