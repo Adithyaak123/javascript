@@ -1,237 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="jquery code.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        /* .small{
+                padding: 15px;
+            } */
+    </style>
+
 </head>
+
 <body>
-   
-    <h2>hello,how are you?</h2>
-   
-    <h3>good morning</h3>
-    <button>click me</button>
-    <button id="b1">hide</button>
-    <button id="b2">show</button>
-    <button id="b3">toggle</button>
-    
-   
-    <p>hii everyone</p>
-   
-    <input type="text">
-    <h1>welcome</h1>
-    <div style="height: 200px;width: 200px;position: relative;background-color: blue;">all of you welcome</div>
-    <script>
-        
+    <div class="container">
+        <div class="row ">
+            <!-- text-center=> text at position center -->
+            <!-- to give background color of a text we use 'bg' -->
+            <!-- to give paddding use 'p'(4 sides padding) -->
+            <!-- to give text color we use 'text' -->
 
-        // $(document).ready(function(){
-        //     $('p').css('color','red')   -> //to style the paragraph use 'css()' method.
-        // });
+            <!-- following are the colors -->
 
-        // $(document).ready(function(){
-            
-        //     $('button').click(function(){   ->'click()' method is used to perform an action when an element is clicked.
-                
-        //         $('p').hide()  ->'hide()' method is used to when an element is hided.
-        //     });
-        // });
+            <!-- primary:blue,secondary:grey,success:green,danger:red,warning:yellow,info:sky-blue,light:white,dark:black,muted: -->
 
-        // $(document).ready(function(){
-        //     $('button').dblclick(function(){  -> 'dblclick() method is used to perform an action when the element is double clicked.'
-        //         $('p').css('font-style','italic')
-        //     });
-        // });
-        
-        //  mouse events
+            <div class="col-3 bg-info text-center p-3">name</div>
+            <div class="col-3 bg-danger text-center p-3">age</div>
+            <div class="col-3 text-center bg-warning p-3">place</div>
+            <div class="col-3 bg-primary text-center p-3">email</div>
 
-        // $(document).ready(function(){
-        //     $('h1').mousedown(function(){  ->1.'musedown()' method is used to perform an action when the mouse is click on an element
-        //         $('button').hide()
-        //     });
-         
-        // });
+        </div>
+        <br><br>
 
-        // $(document).ready(function(){
-        //     $('h3').mouseenter(function(){  ->2.'mouseenter()' method is used to perform an action ,when the mouse is entering on an element.
-        //         $('button').css('background-color','aqua')
-        //     });
+        <!-- bootstrap buttons -->
+        <div class="btn-group">
+            <button class="btn  active  me-3">basic</button>
+            <button class="btn-default   me-3">default</button>
+            <button class="btn-success  me-3">success</button>
+            <button class="btn-primary  me-3">primary</button>
+            <button class="btn-info   me-3">info</button>
+            <button class="btn-warning  me-3">warning</button>
+            <button class="btn-danger  disabled  me-3">danger</button>
+            <button class="btn-link  me-3">link</button>
+        </div>
+        <br>
 
-        // });
 
-        // $(document).ready(function(){
-        //     $('p').mouseleave(function(){  ->3.'mouseleave()' method is used to perform an action when the mouse is removed on an element after entering an element.
-        //         $('h3').hide()
-        //     });
-        // });
+        <!-- bootstrap links -->
+        <p><a href="" class="link-primary">primary</a></p>
+        <p><a href="" class="link-secondary">secondary</a></p>
+        <p><a href="" class="link-success">success</a></p>
+        <p><a href="" class="link-danger">danger</a></p>
+        <p><a href="" class="link-warning">warning</a></p>
+        <p><a href="" class="link-info">info</a></p>
+        <p><a href="" class="link-dark">dark</a></p>
+        <p><a href="" class="link-light bg-dark">light</a></p>
+        <p><a href="" class="link-muted">muted</a></p>
 
-        // $(document).ready(function()
-        // {
-        //     $('button').mousemove(function(){  ->4.'mousemove()' method is same as 'mouseenter()' metod.action to perform when the mouse is move on an element.
-        //         $('h2').css('color','green')
-        //     });
-        // });
 
-        // $(document).ready(function(){
-        //     $('h1').mouseout(function(){  ->5.'mouseout()' method is same as 'mouseleave()' method.action to perform ,to remove an mouse after entering an element.
-        //         $('button').css('border-radius','8px')
-        //     });
-        // });
 
-        // $(document).ready(function(){
-        //     $('p').mouseover(function(){  ->6.'mouseover()' method is same as 'mouseenter()' and 'mousemove()'
-        //         $('h2').css('color','violet')
-        //     });
-        // });
 
-        // $(document).ready(function(){
-        //     $('h3').mouseup(function(){  ->7.'mouseup()' method is same as 'mousedown' method.action perform when the element is clicked.
-        //         $('h1').hide()
-        //     });
 
-        // });
-       
-        // $(document).ready(function(){
-        //     $('input').focus(function(){  ->'focus()' method is used to perform action when the input box is clicked
-        //         $('input').css('background-color','blue')
-        //     });
-        // });
 
-        // $(document).ready(function(){
-        //     $('input').blur(function(){  ->'blur()' method is used to perform an action when the mouse is click out of an input box.
-        //         $('h1').css('color','green')
-        //     });
-        // });
-        
-    //    $(document).ready(function(){
-    //     $('#b1').click(function(){
-    //         $('h1').hide('slow')
-    //     });
-    //     $('#b2').click(function(){
-    //         $('h1').show('slow')  ->'show()' method is used to element is show after the hiding
-    //     });
-    //     $('#b3').click(function(){
-    //         $('h1').toggle('slow')  ->'toggle()' method is used to hide,show work on same element.
-    //     });
-    //    });
 
-     //keyboard events
 
-        //  $(document).ready(function(){
-        //     $('input').keydown(function(){  ->1.'kewdown()' method is to perform action when the key is clicked on inputbox.
-        //         $('#b1').hide()
-        //     });
-        //  });
 
-        // $(document).ready(function(){
-        //     $('input').keypress(function(){  ->2.'keypress()' method is used to perform action when the key is clicked on inputbox.
-        //         $('#b2').hide()
-        //     });
-        //  });
 
-        // $(document).ready(function(){
-        //     $('input').keyup(function(){
-        //         $('#b1').hide()
-        //     });
-        //  });
+    </div>
 
-        //slideup() ->the element is hided by sliding to upwards.
-
-        // $(document).ready(function(){
-        //     $('button').click(function(){
-        //         $('h1').slideUp(4000)
-        //     });
-        //  });
-
-        //slidedown() ->the element is hided by sliding to downwards
-
-        // $(document).ready(function(){
-        //     $('#b1').click(function(){
-        //         $('h2').slideUp(3000)
-        //     });
-        //     $('button').click(function(){
-        //         $('h2').slideDown(3000)
-        //     });
-        //  });
-        
-        //slidetoggle() ->the element is hided by sliding,and showing by sliding,when click on the same button.
-        // $(document).ready(function(){
-        //     $('button').click(function(){
-        //         $('h1').slideToggle(4000)
-        //     });
-        //  });
-
-        //fadeout() ->the element is hided by fading.
-
-        // $(document).ready(function(){
-        //     $('button').click(function(){
-        //         $('h1').fadeOut(4000)
-        //     });
-        //  });
-        
-        //fadein() =>the element is showing by fading after the hiding.
-
-        // $(document).ready(function(){
-        //     $('button').click(function(){
-        //         $('h1').fadeOut(4000)
-        //     });
-        //     $('button').click(function(){
-        //         $('h1').fadeIn(4000)
-        //     });
-        //  });
-
-        //fadetoggle() =>the element is hided and showing by fading ,when click on the same element.
-
-        // $(document).ready(function(){
-        //     $('h2').click(function(){
-        //         $('h1').fadeToggle(4000)
-        //     });
-        //  });
-
-        //fadeto =>the element is hided by fading upto given opacity range.
-
-        // $(document).ready(function(){
-        //     $('button').click(function(){
-        //         $('h1').fadeTo(4000,0.4)
-        //     });
-        //  });
-
-        //animation
-
-        // $(document).ready(function(){
-        //     $('button').click(function(){
-        //         $('div').animate({left:'300px',opacity:'0.4'},4000)
-        //     })
-        // })
-      
-        // $(document).ready(function(){
-        //     $('button').click(function(){
-        //         var div=$('div');  ->using variable
-        //         div.animate({left:'300px',opacity:'0.4',fontsize:'23px'},4000)
-        //     })
-        // })
-        
-        // $(document).ready(function(){
-        //     $('button').click(function(){
-        //         $('div').animate({left:'300px',opacity:'0.4'},4000).css({'font-size':'40px','color':'red'})
-        //         $('div').animate({top:'100px'},6000)
-        //         $('div').animate({right:'100px'})
-        //     });
-        //     $('#b1').click(function(){
-        //         $('div').stop();
-        //     })
-        // })
-
-        //using chaining
-
-        // $(document).ready(function(){
-        //     $('button').click(function(){
-        //         $('h1').css('color','red').slideUp(3000).slideDown(3000).fadeOut(4000).fadeIn(4000) =>all methods are given in one expression using . symbol.
-        //     });
-        // });
-
-    </script>
-
-    
 </body>
+
 </html>
